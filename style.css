@@ -9,6 +9,7 @@ body{
     max-height:80px;
     width: auto;
     height: auto;
+    padding-left: 20px;
 }
 
 .container{
@@ -22,7 +23,7 @@ body{
     justify-content: space-between;
     background-color: rgb(39, 38, 38);
     align-items: center;
-    max-height: 100px;
+    height: 100%;
     box-shadow: 0px 2px 10px black;
     margin-bottom: 10px;
     margin-left: 0;
@@ -66,9 +67,8 @@ a:hover{
 }
 
 .airforce{
-    max-width: auto;
-    max-height: auto;
     width: 100%;
+    transform: scaleX(-1);
 }
 
 .first-row{
@@ -81,13 +81,31 @@ form{
    background-color: rgb(50, 50, 50); 
    box-shadow: 10px 10px 10px black;
    padding: 10%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
 }
 
 .contact{
     align-items: center;
-    height: auto;
+    height: 100%;
     width: 50%;
     padding: 20px;
+}
+
+.form-group{
+    width: 100%;
+}
+
+.InputEmail{
+    width: 100%;
+}
+
+form>h1{
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width: 500px)
@@ -111,27 +129,137 @@ form{
     display: flex;
     width: 100%;
     padding: 20px;
-    align-items: center;
+    align-items: top;
+    align-content: top;
 }
 
 .imgSecundLine{
-    width: 75%;
+    width: 100%;
+    height: auto;
     border: none;
     border-radius: 5%;
 }
 
 .AFGroup{
     border: none;
+    width: 100%;
     align-items: center;
-    display: flex;
     vertical-align: middle;
     flex-direction: column;
+    display: flex;
 }
 
 .tittleSecundLine{
     text-align: center;
+    white-space: nowrap;
+    font-size: xx-large;
+    padding-bottom: 20px;
+    text-shadow: 10px 10px 10px black;
 }
 
 .AFDescription{
-    width: 75%;
+    width: 85%;
+    text-align: justify;
+    padding-top: 20px;
 }
+
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+   }
+   
+   button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+   }
+   
+   button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
+
+   .wave-group {
+    position: relative;
+  }
+  
+  .wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+  }
+  
+  .wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-group .bar:before {
+    left: 50%;
+  }
+  
+  .wave-group .bar:after {
+    right: 50%;
+  }
+  
+  .wave-group .input:focus ~ .bar:before,
+  .wave-group .input:focus ~ .bar:after {
+    width: 50%;
+  }
+  
