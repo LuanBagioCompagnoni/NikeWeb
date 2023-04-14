@@ -79,7 +79,7 @@ a:hover{
 
 form{
    background-color: rgb(50, 50, 50); 
-   box-shadow: 10px 2px 10px black;
+   box-shadow: 10px 10px 10px black;
    padding: 10%;
 }
 
@@ -112,7 +112,6 @@ form{
     width: 100%;
     padding: 20px;
     align-items: center;
-    
 }
 
 .imgSecundLine{
@@ -131,4 +130,8 @@ form{
 
 .tittleSecundLine{
     text-align: center;
+}
+
+.AFDescription{
+    width: 75%;
 }
