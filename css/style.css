@@ -4,62 +4,34 @@ body{
     background-color: rgb(60, 60, 60);
     color: white; 
 }
+
 .logo{
-    max-width:80px;
-    max-height:80px;
+    max-width: 5vw;
     width: auto;
     height: auto;
-    padding-left: 20px;
-}
-
-.container{
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.cabeçalho{
-    width: 100%;  
-    display: flex;
+    padding: 1vh;
     justify-content: space-between;
-    background-color: rgb(39, 38, 38);
-    align-items: center;
-    height: 100%;
+}
+
+.cabeçalho{
     box-shadow: 0px 2px 10px black;
-    margin-bottom: 10px;
-    margin-left: 0;
+    background-color: rgb(39, 38, 38);
+    height: 100%;
 }
 
-li{
-    list-style: none;
-    border: 1px solid black;
-    border-top: none;
-    border-bottom: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0;
+.menus{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
 }
 
-.nav{
-    margin: 0;
-    padding: 0;
-    align-items: left;
-}
-
-li>a{
+nav>a{
     text-decoration: none; 
     color: rgb(255, 255, 255);
     font-size: 30px;
-    padding-top: 10px;
     margin-left: 35px;
     margin-right: 35px;
-}
-
-.menu-1{
-    border-left: none;   
-}
-
-.menu-5{
-    border-right: none;
 }
 
 a:hover{
@@ -73,6 +45,7 @@ a:hover{
 
 .first-row{
     align-items: center;
+    justify-content: space-around;
     display: flex;
     width: 100%;
 }
@@ -96,21 +69,34 @@ form{
 
 .form-group{
     width: 100%;
+    padding-top: 5vh;
 }
 
 .InputEmail{
     width: 100%;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 form>h1{
-    white-space: nowrap;
     width: 100%;
     text-align: center;
+    margin: 0;
 }
 
-@media (max-width: 500px)
-{
-    .first-row{
+.nameForm{
+  padding-bottom: 0.5vw;
+}
+
+.emailForm{
+  padding-bottom: 0.5vw;
+}
+
+@media(max-width: 1000px) {
+  .secund-row{
+    flex-direction: column;
+   }
+   .first-row{
     flex-direction: column;
    }
    .contact{
@@ -119,10 +105,6 @@ form>h1{
    .airforce{
     width: 100%;
    }
-}
-
-.InputEmail{
-    padding-bottom: 10px;
 }
 
 .secund-row{
@@ -147,6 +129,7 @@ form>h1{
     vertical-align: middle;
     flex-direction: column;
     display: flex;
+    padding: 1vw;
 }
 
 .tittleSecundLine{
@@ -164,13 +147,13 @@ form>h1{
 }
 
 button {
+    font-family: sans-serif;
     padding: 17px 40px;
     border-radius: 50px;
     border: 0;
     background-color: white;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
     font-size: 15px;
     transition: all .5s ease;
    }
